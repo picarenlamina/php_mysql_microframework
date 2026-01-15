@@ -14,7 +14,7 @@ services:
       - "3306:3306"
     volumes:
       - mysql_data:/var/lib/mysql
-      - ./data:/docker-entrypoint-initdb.d   # 👈 inicialización BD
+      - ./data:/docker-entrypoint-initdb.d
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
@@ -30,8 +30,8 @@ services:
       PMA_USER: root
       PMA_PASSWORD: password
 
-app:
-    build: .              #  Construye usando el Dockerfile de esta carpeta
+  app:
+    build: .
     container_name: app
     restart: always
     ports:
