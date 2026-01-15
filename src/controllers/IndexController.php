@@ -1,6 +1,7 @@
 <?php
 class IndexController
 {
+	public $view;
     function __construct()
     {
         //Creamos una instancia de nuestro mini motor de plantillas
