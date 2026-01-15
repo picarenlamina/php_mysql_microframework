@@ -1,0 +1,12 @@
+USE app_db;
+
+DROP TABLE IF EXISTS ITEMS;
+
+CREATE TABLE ITEMS
+	(
+	codigo INTEGER NOT NULL AUTO_INCREMENT ,
+	item VARCHAR(10)  NOT NULL ,
+	PRIMARY KEY(codigo)  );
+	
+	
+insert into ITEMS VALUES ( 1, "PIEZA" )
