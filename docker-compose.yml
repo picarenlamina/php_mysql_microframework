@@ -30,14 +30,14 @@ services:
       PMA_USER: root
       PMA_PASSWORD: password
 
-  app:
-    image: php:8.2-apache
+app:
+    build: .              #  Construye usando el Dockerfile de esta carpeta
     container_name: app
     restart: always
     ports:
       - "8000:80"
     volumes:
-      - ./src:/var/www/html   # 👈 código de la app
+      - ./src:/var/www/html
     depends_on:
       - mysql
 
